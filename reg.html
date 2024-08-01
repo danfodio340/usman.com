@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <style>
+/* Red: F24865, Light Gray: F4F4F4, Blue: 45CAE6, Green: 09C775, Dark Gray: 797979 */
+
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
+
+* {
+  box-sizing: border-box;
+  font-family: Quicksand, sans-serif;
+}
+
+body {
+  background-color: #797979;
+  color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  margin: 20px;
+  max-width: 1000px;
+  width: 1000%;
+}
+
+.wrap form {
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+
+.form-header {
+  background-color: #45CAE6;
+  border-radius: 4px 4px 0 0;
+  padding: 1em;
+}
+
+.form-header h2 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.75em;
+  margin: 0;
+}
+
+.form-body {
+  background-color: #fff;
+  padding: 1em;
+}
+
+.form-body label,
+.form-body input,
+.form-body select,
+.form-body textarea {
+  display: block;
+  width: 100%;
+}
+
+.form-body label {
+  font-size: .8em;
+  font-weight: 700;
+  line-height: 1;
+  margin: .75em 0 .25em;
+}
+
+.form-body input,
+.form-body select,
+.form-body textarea {
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 4px;
+  padding: .25em;
+}
+
+.form-body fieldset {
+  border: none;
+  margin: 0 0 1em;
+  padding: 0;
+}
+
+.form-body fieldset:last-of-type {
+  margin-bottom: 0;
+}
+
+.form-body fieldset legend {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.form-footer {
+  background-color: #e2e2e2;
+  border-radius: 0 0 4px 4px;
+  padding: 1em;
+}
+ 
+.form-footer input[type="submit"] {
+  background-color: #240107;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 1em 1.5em;
+}
+
+.form-footer input[type="submit"] {
+  background-color: #28a1f193;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 1em 1.5em;
+}
+.form-footer input[type="submit"] {
+  background-color: #28a1f193;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 1em 1.5em;
+}
+
+
+/******** Primary School option actions ********/
+
+.sub-opts input[name="subscription"] {
+  display: none;
+}
+
+.sub-opts input[name="subscription"]   .sub-opt {
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.sub-opts input[name="subscription"]:checked   .sub-opt {
+  background-color: #09C775;
+  color: #fff;
+}
+
+.sub-opts input[name="subscription"]   .sub-opt .sub-label .fa {
+  display: none;
+}
+
+.sub-opts input[name="subscription"]:checked   .sub-opt .sub-label .fa {
+  display: inline-block;
+}
+
+.sub-opts .sub-opt .sub-label {
+  display: block;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 1em;
+}
+
+.sub-opts .sub-opt .sub-label span.price {
+  display: inline-block;
+  float: right;
+}
+
+
+
+
+ </style>
+
+</head>
+
+<body>
+<div class="wrap">
+  <form>
+    <div class="form-header">
+      <h2>Registration</h2>
+    </div>
+    <div class="form-body">
+        
+      <fieldset>
+       <center> <legend><i class="fa fa-user"></i> Bio-Data</legend></center><hr>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <div id="profile-container">
+       <image id="profileImage" src="http://lorempixel.com/100/100" />
+    </div>
+    <input id="imageUpload" type="file" 
+           name="profile_photo" placeholder="Photo" required="" capture> 
+    
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" required> 
+        <label for="fname">Middle Name</label>
+        <input type="text" id="dname" name="mname" Optional>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" required>
+        <label for="address"> Contact Address</label>
+        <input type="text" id="address" name="address" required>
+        <label for="address"> Permanent Address</label>
+        <input type="text" id="address" name="address" required>
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" required>
+        <label for="state">State</label>
+        <select id="state" name="state" required>
+          <option value="State"></option><option value="Ai">Abia</option><option value="Ad">Adamawa</option><option value="Ak">Akwa-Ibom</option><option value="Ab">Anambra</option><option value="Ba">Bauchi</option><option value="Be">Benue</option><option value="BR">Borno</option><option value="CR">Cross River</option><option value="EY">Ebonyi</option><option value="ED">Edo</option><option value="EK">Ekiti</option><option value="EG">Enugu</option><option value="GM">Gombe</option><option value="IM">Imo</option><option value="JG">Jigawa</option><option value="KD">Kaduna</option><option value="KN">Kano</option><option value="KT">Katsina</option><option value="KB">Kebbi</option><option value="KG">Kogi</option><option value="KR">Kwara</option><option value="LG">Lagos</option><option value="NS">Nasarawa</option><option value="NG">Niger</option><option value="OG">Ogun</option><option value="OD">Ondo</option><option value="OY">Oyo</option><option value="PL">Plateau</option><option value="RV">Rivers</option><option value="SO">Sokoto</option><option value="Ta">Taraba</option><option value="YO">Yobe</option><option value="ZA">Zamfara</option>
+        </select>
+        <br>      
+        <label for="state">LGA</label>
+        <select id="state" name="state" required> 
+          <option value="Idah">Select LGA</option><option value="Ig">Igalamela/Odolu</option><option>Idah</option>
+            <select name="lga" id="lga">
+        
+            </select>
+            <hr> Gender
+  <Select>:
+     <strong><option>Select Gender</option></strong>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option></select>
+  <hr> <b>Date of birth:<input type="date"></b>
+  <hr> Place of birth:<input type="text">
+  <hr> <b>Father's Name:<input type="text"></b><br>
+  <p></p>
+  <b>Father's Contact:<input type="number"></b>
+  <hr> <b>Mother's Name:<input type="text"></b><br>
+  <p></p>
+  <b>Mothers Contact:<input type="number"></b>
+  <hr> Whom do you live with:520<br><input type="radio" name="gndr">Mother<br>
+  <input type="radio" name="gndr">Father<br><input type="radio" name="gndr">Both
+  <hr> Mobile Number:<input type="number">
+  <hr> <b>Select your languages:<input type="checkbox">English</b>
+  <input type="checkbox">Ga<input type="checkbox">Twi<input type="checkbox">French
+  <input type="checkbox">Fante<input type="checkbox">Hausa
+  <input type="checkbox">Damgbe<input type="checkbox">Nzema
+        <label for="zip">Zipcode</label>
+        <input type="text" id="zip" name="zip" required>
+      </fieldset><hr>
+      <fieldset>
+        <center><legend><i class="fa fa-lock"></i> Account Login</legend></center>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="cr_password">Create Password</label>
+        <input type="password" id="cr_password" name="cr_password" required>
+        <label for="conf_password">Confirm Password</label>
+        <input type="password" id="conf_password" name="conf_password" required>
+      </fieldset><hr>
+      <fieldset>
+        <center><legend><i class="fa fa-Start"></i> Name Of Primary School Attended With Date</legend></center>
+        <label for="pri">Name of Primary School</label>
+        <input type="Primary" id="Started Year" name="Started Year" required>
+        <label for="date">From To </label>
+        <input type="Primary" id="Started Year" name="Started Year" required>
+        </fieldset><hr>
+        <fieldset>
+            <center><legend><i class="fa fa-Start"></i> Institution Applying For</legend></center>
+            <label for="pri">Name of Instituion</label>
+                <select>
+            <option>Select Instituion</option>
+<option>First Grade Success Academy Okenya</option>
+<option>Faith Academy Okenya</option>
+<option>Living World Academy Okenya</option>
+<option>Grace Land Academy Idah</option>
+<option>Babto Academy Idah</option>
+<option>Bluepearls Academy Idah</option>
+<option>Precious Royal Academy Okenya</option>
+<option>Dickson Memorial College Idah</option>
+<option>St Peter's College Idah</option>
+<option>Higher Grammer Secondary School, Ajaka</option>
+<option>Islamiyya Secondary School Ajaka</option>
+<option>Madona Secondary School Ajaka</option>
+<option>Grace Land Academy Idah</option>
+<option>Ode Memorial College Ajaka</option>
+<option>Victory Secondary School Ojuwo-Afo</option>
+<Option>Univerisal Basic Education (UBE) Okenya</Option>
+<option>LGEA Primary School Okenya</option></select>
+<hr>
+<label for="class">Select Class</label>
+<select>
+    <option>Select Class</option>
+<option>Nursey 1</option>
+<option>Nursey 2</option>
+<option>Primary 1</option>
+<option>Primary 2</option>
+<option>Primary 3</option>
+<option>Primary 4</option>
+<option>Primary 5</option>
+<option>Primary 6</option>
+<option>JSS 1</option>
+<option>JSS 2</option>
+<option>JSS 3</option>
+<option>SSS 1</option>
+<option>SSS 2</option>
+<option>SSS 3</option></select>
+<br><hr>
+<b>Program</b>
+<select>
+    <option>Select your Programme</option>
+    <option>GENERAL ART</option>
+    <option>GENERAL SCIENCE</option>
+    <option>VISUAL ART</option>
+    <option>HOME ECONOMICS</option>
+    <option>BUSINESS</option>
+    <option>AGRICULTURAL SCIENCE</option>
+    <option>PHYSICS</option>
+    <option>CHEMISTRY</option>
+    <option>BIOLOGY</option>
+    <option>CIVIC EDUCATION</option>
+    <option>COMPUTER SCIENCE</option>
+            </select><br>
+      <hr> <b>Religion:</b>
+      <select><option>Religion</option>
+    <option>Christianity</option>
+    <option>Islamic</option>
+    <option>Traditionalist</option>
+    <option>Other</option>
+    </select>
+      <hr><b>Name of Basic School:<input type="text"></b>
+      <hr> ACCOMMODATION:
+      <input type="radio" name="gndr">BOARDING
+      <input type="radio" name="gndr">DAY
+      <input type="radio" name="gndr">HOSTEL
+      <hr> <b>SPORTS:</b>
+      <input type="checkbox">ATHLETICS<input type="checkbox">FOOTBALL
+      <input type="checkbox">HANDBALL<input type="checkbox">BASKETBALL
+      <input type="checkbox">NETBALL<input type="checkbox">VOLLEYBALL
+      <input type="checkbox">TABLE TENNIS
+        </fieldset>
+      
+        <fieldset class="sub-opts">
+        <center><legend><i class="fa fa-tags"></i> Additional Information</legend></center>
+        
+        <input type="radio" name="additional information" value="free" id="free">
+        <div class="sub-opt">
+          <label class="sub-label" for="free"><i class="fa fa-check"></i> Have U Ever Been Admitted in the Court of Law <span class="price">Yes/No</span></label>
+        </div>
+        
+        <input type="radio" name="additional infomration" value="deluxe" id="deluxe" checked required>
+        <div class="sub-opt">
+          <label class="sub-label" for="deluxe"><i class="fa fa-check"></i> Have You Ever Been Admitted to the Hospital<span class="price">Yes/No</span></label>
+        </div>
+        
+        <input type="radio" name="additional information" value="premium" id="additional information">
+        <div class="sub-opt">
+          <label class="sub-label" for="Do You Have Eyes Problem"><i class="fa fa-check"></i>Do You Have Eyes Problem <span class="price">No</span></label>
+        </div>
+        
+      </fieldset>
+    </div>
+    <div class="form-footer">
+   
+           <a href="reg.html"><input type="submit" value="Previous"></a>
+           <a href="next.html"><input type="Submit" value="Next"></a>
+           <button><a href="next.html">Next</button></a>
+           
+      
+    </div>
+  </form>
+</div>
+
+</body>
+
+</html 
